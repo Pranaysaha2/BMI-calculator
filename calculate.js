@@ -6,7 +6,6 @@ const bodyParser= require("body-parser")
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
-//app.use(express.json());
 
 app.get("/", function(req, res){
     res.sendFile(__dirname + "/bmicalculator.html");
@@ -17,30 +16,42 @@ app.post("/", function(req, res){
     var weight= Number(req.body.weight);
     var height = Number(req.body.height);
 
-   // let myJson = req.body;      // your JSON
-    //let myValue = req.body.myKey;	// a value from your JSON
-	//response.send(myJson);	
+ 
 
     var bmi = weight / Math.pow(height/100, 2);
     if(bmi<18.5)
     {
-    index = "Under Weight";
+        BMI_Category = "Under Weight";
+        Health_risk  = "Malnutrition risk";
     }
     else if (bmi>=18.5 && bmi<=24.9)
     {
-    index = "Normal Weight";
+        BMI_Category = "Normal Weight";
+        Health_risk  = "Low risk";
     }
 
-    else if (bmi>24.9 &&  bmi<=29.9)
+    else if (bmi>25 &&  bmi<=29.9)
     {
-        index = "over Weight";
+        BMI_Category = "over Weight";
+        Health_risk  = "Enhanced risk";
+    }
+    else if (bmi>30 &&  bmi<=34.9)
+    {
+        BMI_Category = "Moderately obese";
+        Health_risk  = "Medium risk";
+    }
+    else if (bmi>35 &&  bmi<=39.9)
+    {
+        BMI_Category = "Severely obese";
+        Health_risk  = "High risk";
     }
     else
     {
-     index = "obesity";
+        BMI_Category = "Very severely obese";
+        Health_risk  = "Very high risk";
     }
-    res.send("Bmi: " + bmi + " | BMI Category: " + index);
-    //res.send("BMI Category: " + index);
+    res.send("Bmi: " + bmi + " | BMI Category: " + BMI_Category + " | Health_risk: " + Health_risk);
+   
 });
 
 app.listen(3000, function(){
