@@ -1,0 +1,13 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+docker_build:
+  - docker build -t shebangdocker/nodejs-bmiCalc .
+
+  # login to the  docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+  - docker push shebangdocker/nodejs-bmiCalc

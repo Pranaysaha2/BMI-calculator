@@ -1,0 +1,76 @@
+
+> calculator@1.0.0 start
+> node calculate.js
+
+Server is running on port 3000.
+
+> calculator@1.0.0 start
+> node calculate.js
+
+Server is running on port 3000.
+npm ERR! path /app
+npm ERR! command failed
+npm ERR! signal SIGTERM
+npm ERR! command sh -c node calculate.js
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2021-08-17T15_22_28_252Z-debug.log
+
+> calculator@1.0.0 start
+> node calculate.js
+
+Server is running on port 3000.
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:371:5)
+    at ServerResponse.setHeader (node:_http_outgoing:573:11)
+    at ServerResponse.header (/app/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/app/node_modules/express/lib/response.js:170:12)
+    at /app/calculate.js:39:9
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at /app/node_modules/express/lib/router/index.js:281:22
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:371:5)
+    at ServerResponse.setHeader (node:_http_outgoing:573:11)
+    at ServerResponse.header (/app/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/app/node_modules/express/lib/response.js:170:12)
+    at /app/calculate.js:39:9
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at /app/node_modules/express/lib/router/index.js:281:22
+
+> calculator@1.0.0 start
+> node calculate.js
+
+/app/calculate.js:37
+    }
+    ^
+
+SyntaxError: Private field '#res' must be declared in an enclosing class
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:79:12)
+    at node:internal/main/run_main_module:17:47
+
+> calculator@1.0.0 start
+> node calculate.js
+
+Server is running on port 3000.
+
+> calculator@1.0.0 start
+> node calculate.js
+
+Server is running on port 3000.
+
+> calculator@1.0.0 start
+> node calculate.js
+
+Server is running on port 3000.
