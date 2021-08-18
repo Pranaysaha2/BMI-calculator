@@ -5,9 +5,9 @@ services:
   - docker
 
 after_success:
-  - docker build -t shebangdocker/nodejs-bmiCalc .
+  - docker build -t shebangdocker/nodejs-bmicalc .
 
   # login to the  docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push shebangdocker/nodejs-bmiCalc
+  - docker push shebangdocker/nodejs-bmicalc
