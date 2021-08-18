@@ -4,7 +4,7 @@ language: generic
 services:
   - docker
 
-docker_build:
+after_success:
   - docker build -t shebangdocker/nodejs-bmiCalc .
 
   # login to the  docker CLI
